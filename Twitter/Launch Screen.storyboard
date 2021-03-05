@@ -16,13 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TwitterLogo" translatesAutoresizingMaskIntoConstraints="NO" id="6Sv-cK-44L">
-                                <rect key="frame" x="52" y="211" width="271" height="244"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TwitterLogo" translatesAutoresizingMaskIntoConstraints="NO" id="6Sv-cK-44L">
+                                <rect key="frame" x="52" y="198" width="271" height="271"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="271" id="41s-zc-8za"/>
+                                    <constraint firstAttribute="height" constant="271" id="GNb-GA-Mvr"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="271" id="Iif-Wa-QFB"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Sv-cK-44L" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Qtx-GX-bQK"/>
+                            <constraint firstItem="6Sv-cK-44L" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="wr0-GE-6xF"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
