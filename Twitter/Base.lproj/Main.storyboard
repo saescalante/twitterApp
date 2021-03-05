@@ -58,12 +58,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="s9t-Zg-cC9">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="121" id="s9t-Zg-cC9">
+                                <rect key="frame" x="0.0" y="28" width="414" height="121"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s9t-Zg-cC9" id="061-RI-dfy">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ixX-kP-53S">
+                                            <rect key="frame" x="20" y="27" width="67" height="67"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Tweet Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BY3-ib-vtD">
+                                            <rect key="frame" x="95" y="41" width="239" height="69"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" misplaced="YES" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9O-By-2EN">
+                                            <rect key="frame" x="95" y="11" width="81" height="22"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ixX-kP-53S" firstAttribute="bottom" secondItem="061-RI-dfy" secondAttribute="bottomMargin" id="4DD-mt-Bgd"/>
+                                        <constraint firstItem="ixX-kP-53S" firstAttribute="leading" secondItem="061-RI-dfy" secondAttribute="leadingMargin" id="8Cd-Kc-x5O"/>
+                                        <constraint firstItem="T9O-By-2EN" firstAttribute="leading" secondItem="ixX-kP-53S" secondAttribute="trailing" constant="8" symbolic="YES" id="Fp4-0N-8eB"/>
+                                        <constraint firstItem="T9O-By-2EN" firstAttribute="leading" secondItem="BY3-ib-vtD" secondAttribute="leading" id="iJ4-E8-fil"/>
+                                        <constraint firstItem="BY3-ib-vtD" firstAttribute="top" secondItem="T9O-By-2EN" secondAttribute="bottom" constant="8" symbolic="YES" id="kMu-1W-Zxn"/>
+                                        <constraint firstItem="T9O-By-2EN" firstAttribute="leading" secondItem="061-RI-dfy" secondAttribute="leading" constant="155" id="mZp-wc-h7s"/>
+                                        <constraint firstItem="ixX-kP-53S" firstAttribute="bottom" secondItem="BY3-ib-vtD" secondAttribute="bottom" id="nKb-Xk-jIN"/>
+                                        <constraint firstItem="ixX-kP-53S" firstAttribute="top" secondItem="T9O-By-2EN" secondAttribute="top" id="tKc-gr-4yI"/>
+                                        <constraint firstItem="T9O-By-2EN" firstAttribute="top" secondItem="061-RI-dfy" secondAttribute="topMargin" id="tvF-nK-G8a"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -83,7 +111,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Grs-Ue-c2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="90"/>
+            <point key="canvasLocation" x="1165.217391304348" y="89.732142857142847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BQ6-nJ-Lgi">
