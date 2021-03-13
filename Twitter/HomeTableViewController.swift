@@ -3,7 +3,6 @@
 //  Twitter
 //
 //  Created by Santiago Escalante  on 3/4/21.
-//  Copyright © 2021 Dan. All rights reserved.
 //
 
 import UIKit
@@ -22,6 +21,13 @@ class HomeTableViewController: UITableViewController {
         //load the tweet
         loadTweets()
         //refresh
+        myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
+        tableView.refreshControl = myRefreshControl
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadTweets()
         myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
     }

@@ -3,7 +3,6 @@
 //  Twitter
 //
 //  Created by Santiago Escalante  on 3/5/21.
-//  Copyright © 2021 Dan. All rights reserved.
 //
 
 import UIKit
